@@ -1,0 +1,142 @@
+#container1,#container2,#container3,#container4,#container5,#container6,#container7{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1,auto);
+    gap: 10px;
+    
+
+    width: 60%
+    
+}
+
+#head1,#head2,#head3,#head4,#head5,#head6,#head7,#head8{
+text-align: center;
+color: #005361;
+/* margin-top: 5%; */
+padding-top: 10px;
+margin-top: 5%;
+
+}
+
+
+
+#container1>div>img{
+        height: 250px;
+        width: 200px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}
+
+a>img{
+        height: 250px;
+        width: 200px;
+}
+
+h4{
+text-align: center;
+}
+
+
+#container_big1{
+
+    width: 100%;
+    background-color: #eafcff;
+    /* margin-top: 3%; */
+    /* padding-top: 0.1px; */
+
+}
+
+#container2>div>img{
+        height: 250px;
+        width: 200px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}
+
+
+#container_big2{
+
+width: 100%;
+background-color: #aff3ff;
+/* margin-top: 5%; */
+/* padding-top: 0.2px; */
+
+}
+
+#container3>div>img{
+        height: 250px;
+        width: 200px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}
+
+
+#container4>div>img{
+        height: 250px;
+        width: 200px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}
+
+h4{
+text-align: center;
+}
+
+#container_big3{
+
+width: 100%;
+background-color: #eafcff;
+/* margin-top: 5%; */
+/* padding-top: 0.2px; */
+
+}
+
+#container5>div>img{
+        height: 250px;
+        width: 200px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}
+
+
+
+
+#container6>div>img{
+        height: 250px;
+        width: 200px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}
+
+#container7>div>img{
+        height: 250px;
+        width: 200px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}
+
+#last_img{
+text-align: center;
+margin-top: 10%;
+}
+
+#container8{
+
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1,auto);
+    gap: 10px;
+    
+
+    width: 80%
+
+}
+
+#container8>div>img{
+        height: 350px;
+        width: 500px;
+        /* padding-left: 10%; */
+        /* width: 200px; */
+}

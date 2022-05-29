@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfumes (EDT / EDP) | Nykaa</title>
+    <link rel="stylesheet" href="fragrance_perfume.css" />
+    <link
+      rel="stylesheet"
+      href="/unit2projectr/fragrance_perfume/fragrance_perfume/fontawesome-free-6.0.0-web/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:ital,wght@0,500;1,300;1,500&family=Smooch&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0"
+    />
+    <link rel="stylesheet" href="/.autoSilder.css" />
+    <!-- <link rel="stylesheet" href="/footer2.css" /> -->
+    <link rel="stylesheet" href="/Auto Slider/autoSilder.html" />
+  </head>
+  <body>
+    <div id="navigationBar">
+      <div class="nav">
+        <div class="left">
+          BEAUTY BONANZA Get Your Daily Dose Of Amazing Deals
+        </div>
+        <div class="right1">
+          <div>
+            <i class="fas fa-mobile-alt"></i>
+            <a target="_blank" href="https://www.nykaa.com/installApp"
+              >Get App</a
+            >
+          </div>
+          <div>
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              target="_blank"
+              href="https://www.nykaa.com/stores-n-events-desktop"
+              >Stores & Events</a
+            >
+          </div>
+          <div>
+            <i class="fas fa-gift"></i>
+            <a target="_blank" href="https://www.nykaa.com/giftcard/list"
+              >Gift Card</a
+            >
+          </div>
+          <div>
+            <i class="far fa-question-circle"></i>
+            <a target="_blank" href="https://support.nykaa.com/">Help</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav1">
+        <div class="left1">
+          <a href="/home.html">
+            <img
+              class="nikaimg"
+              src="https://jobs.socialsamosa.com/wp-content/uploads/2018/07/Nykaa-logo.png"
+              alt="NYKAA LOGO"
+            />
+          </a>
+          <div class="nyka">
+            <a href="">CATEGORIES</a>
+            <a href="">BRANDS</a>
+            <a href="">NYKAA FASHION</a>
+            <a href="">BEAUTY ADVICE</a>
+            <a href="">NYKAA NETWORK</a>
+          </div>
+        </div>
+
+        <div class="right">
+          <div>
+            <input type="text" placeholder="Search On Nykaa" />
+            <i class="fas fa-user"></i>
+            <a class="space" target="_blank" href="/signup.html">Account</a>
+            <i class="fas fa-shopping-bag" onclick="openCartFunction()"></i>
+          </div>
+        </div>
+      </div>
+      <div class="nav2">
+        <div>
+          <a href="/nykaa/skinMainPage.html">Skin</a>
+          <a href="/nykaa/makeupMainPage.html">Makeup</a>
+          <a href="/unit2projectr/Auto Slider/naturalHome.html">Hair</a>
+          <a href="/unit2projectr/Auto Slider/personalHome.html"
+            >Presonal Care</a
+          >
+          <a href="/unit2projectr/Auto Slider/naturalHome.html">Natural</a>
+          <a href="/Project-Unit-2/Project-Unit-2/Mom_baby1.html">Mom & baby</a>
+          <a href="/Project-Unit-2/Project-Unit-2/Health_Wellness.html"
+            >Health & Wellness</a
+          >
+          <a href="/men/men.html">Men</a>
+          <a href="/Project/fragrance/fragrance.html">Fragrance</a>
+          <a href="">LINUX</a>
+        </div>
+      </div>
+    </div>
+    <!-- <----------------Cart Page Start------------->
+    <div id="cartPageContainer">
+      <div id="cartPageHeading">
+        <div>
+          <i class="fas fa-chevron-left" onclick="closeCartFunction()"></i>
+        </div>
+        <div id="numOfItemsOnCartPage"></div>
+      </div>
+      <div id="cartPage"></div>
+      <div id="proceedContainer">
+        <div id="cartPageGrandTotal">
+          <div>Grand total:</div>
+          <div></div>
+        </div>
+        <div>
+          <span onclick="window.location.href='/payment1/address.html'"
+            >PROCEED</span
+          >
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <!-- <link rel="stylesheet" href="/fragrance/fragrance_perfume/data/fragrance_perfume_data.html"> -->
+    <script>
+      function plusFunction(a) {
+        var callDataForPlus = JSON.parse(localStorage.getItem("AddToCartData"));
+        var arr = [];
+        callDataForPlus.map(function (element) {
+          if (element.name != a) {
+            var obj = {
+              bstsell: element.bstsell,
+              cp: element.cp,
+              discount: element.discount,
+              fe: element.fe,
+              img_url: element.img_url,
+              mrp: element.mrp,
+              name: element.name,
+              qty: element.qty,
+            };
+            arr.push(obj);
+          } else {
+            var obj = {
+              bstsell: element.bstsell,
+              cp: element.cp,
+              discount: element.discount,
+              fe: element.fe,
+              img_url: element.img_url,
+              mrp: element.mrp,
+              name: element.name,
+              qty: ++element.qty,
+            };
+            arr.push(obj);
+          }
+        });
+        localStorage.setItem("AddToCartData", JSON.stringify(arr));
+        display();
+      }
+      function minusFunction(a) {
+        var callDataForPlus = JSON.parse(localStorage.getItem("AddToCartData"));
+        var arr = [];
+        callDataForPlus.map(function (element) {
+          if (element.name != a) {
+            var obj = {
+              bstsell: element.bstsell,
+              cp: element.cp,
+              discount: element.discount,
+              fe: element.fe,
+              img_url: element.img_url,
+              mrp: element.mrp,
+              name: element.name,
+              qty: element.qty,
+            };
+            arr.push(obj);
+          } else {
+            var obj = {
+              bstsell: element.bstsell,
+              cp: element.cp,
+              discount: element.discount,
+              fe: element.fe,
+              img_url: element.img_url,
+              mrp: element.mrp,
+              name: element.name,
+              qty: --element.qty,
+            };
+            arr.push(obj);
+          }
+        });
+        localStorage.setItem("AddToCartData", JSON.stringify(arr));
+        display();
+      }
+      function display() {
+        var calltry = document.querySelector("#cartPage");
+        calltry.innerHTML = "";
+        var cartDataForCartPage = JSON.parse(
+          localStorage.getItem("AddToCartData")
+        );
+        console.log(cartDataForCartPage);
+        var numOfItemsOnCartPage = document.querySelector(
+          "#numOfItemsOnCartPage"
+        );
+        numOfItemsOnCartPage.innerText =
+          "Shopping Bag (" + cartDataForCartPage.length + ")";
+        cartDataForCartPage.reduce(function (acc, ele, ind) {
+          var cartPageProductContainer = document.createElement("div");
+          cartPageProductContainer.setAttribute(
+            "class",
+            "cartPageProductContainer"
+          );
+          var quantity = ele.qty;
+
+          var imgDiv = document.createElement("div");
+          imgDiv.setAttribute("class", "imgDiv");
+
+          var imgOfProduct = document.createElement("img");
+          imgOfProduct.setAttribute("src", ele.img_url);
+
+          var nameOfProduct = document.createElement("span");
+          nameOfProduct.innerText = ele.name;
+
+          var removeButton = document.createElement("i");
+          removeButton.setAttribute("class", "fa-regular fa-trash-can");
+          removeButton.addEventListener("click", function () {
+            removeItem(ele, quantity);
+          });
+          imgDiv.append(imgOfProduct, nameOfProduct, removeButton);
+
+          var qtyDiv = document.createElement("div");
+          qtyDiv.setAttribute("class", "qtyDiv");
+          var plusQty = document.createElement("button");
+          plusQty.innerText = "+";
+          plusQty.addEventListener("click", function () {
+            console.log("work");
+            plusFunction(ele.name);
+          });
+          var minusQty = document.createElement("button");
+          minusQty.innerText = "-";
+          minusQty.addEventListener("click", function () {
+            if (ele.qty > 1) {
+              minusFunction(ele.name);
+            }
+          });
+
+          var qtyOfProduct = document.createElement("div");
+          qtyOfProduct.setAttribute("id", "quantitiesButton");
+          qtyOfProduct.append(minusQty, quantity, plusQty);
+
+          var priceOfProduct = document.createElement("div");
+          var originalPrice = document.createElement("s");
+          var total_mrp_qty = ele.mrp * quantity;
+          originalPrice.innerText = "Rs." + total_mrp_qty;
+          var sellingPrice = document.createElement("div");
+          var total_cp_qty = ele.cp * quantity;
+          sellingPrice.innerText = "Rs." + total_cp_qty;
+          if (ele.mrp != undefined) {
+            priceOfProduct.append(originalPrice, sellingPrice);
+          } else {
+            priceOfProduct.append(sellingPrice);
+          }
+
+          qtyDiv.append(qtyOfProduct, priceOfProduct);
+
+          cartPageProductContainer.append(imgDiv, qtyDiv);
+
+          if (ind == cartDataForCartPage.length - 1) {
+            var totaling = JSON.parse(localStorage.getItem("AddToCartData"));
+            var totalMrp = totaling.reduce(function (acc, el) {
+              if (el.mrp != undefined) {
+                return (acc += el.mrp * el.qty);
+              } else {
+                return (acc += el.cp * el.qty);
+              }
+            }, 0);
+            var totalSellingPrice = totaling.reduce(function (acc, el) {
+              return (acc += el.cp * el.qty);
+            }, 0);
+            var totalDiscountPrice = totaling.reduce(function (acc, el) {
+              if (el.mrp != undefined) {
+                return (acc += el.mrp * el.qty - el.cp * el.qty);
+              } else {
+                return (acc += 0);
+              }
+            }, 0);
+            var paymentDetailsContainer = document.createElement("div");
+            paymentDetailsContainer.setAttribute(
+              "id",
+              "paymentDetailsContainer"
+            );
+
+            var paymentDetailsHeading = document.createElement("div");
+            paymentDetailsHeading.innerText = "Payment Details";
+
+            var allPricesContainer = document.createElement("div");
+
+            var bagTotalContainer = document.createElement("div");
+            var bagTotal = document.createElement("div");
+            bagTotal.innerText = "Bag Total";
+            var bagTotalPrice = document.createElement("div");
+            bagTotalPrice.innerText = "Rs." + totalMrp;
+            bagTotalContainer.append(bagTotal, bagTotalPrice);
+
+            var bagDiscountContainer = document.createElement("div");
+            var bagDiscount = document.createElement("div");
+            bagDiscount.innerText = "Discount";
+            var bagDiscountPrice = document.createElement("div");
+            bagDiscountPrice.innerText = "-Rs." + totalDiscountPrice;
+            bagDiscountContainer.append(bagDiscount, bagDiscountPrice);
+
+            var bagSubTotalContainer = document.createElement("div");
+            var bagSubTotal = document.createElement("div");
+            bagSubTotal.innerText = "Sub Total";
+            var bagSubTotalPrice = document.createElement("div");
+            bagSubTotalPrice.innerText = "Rs." + totalSellingPrice;
+            bagSubTotalContainer.append(bagSubTotal, bagSubTotalPrice);
+
+            var bagShippingChargeContainer = document.createElement("div");
+            var bagShippingCharge = document.createElement("div");
+            bagShippingCharge.innerText = "Shipping Charge";
+            var bagShippingChargePrice = document.createElement("div");
+            bagShippingChargePrice.innerText = "Free";
+            bagShippingChargeContainer.append(
+              bagShippingCharge,
+              bagShippingChargePrice
+            );
+
+            var bagGrandTotalContainer = document.createElement("div");
+            var bagGrandTotal = document.createElement("div");
+            bagGrandTotal.innerText = "Grand Total";
+            var bagGrandTotalPrice = document.createElement("div");
+            bagGrandTotalPrice.innerText = "Rs." + totalSellingPrice;
+            bagGrandTotalContainer.append(bagGrandTotal, bagGrandTotalPrice);
+
+            var bagCouponContainer = document.createElement("div");
+            var bagCoupon = document.createElement("div");
+            bagCoupon.innerText = "Have a Coupon?";
+            var bagCouponPrice = document.createElement("div");
+            bagCouponPrice.innerText = "View Coupons";
+            bagCouponContainer.append(bagCoupon, bagCouponPrice);
+
+            allPricesContainer.append(
+              bagTotalContainer,
+              bagDiscountContainer,
+              bagSubTotalContainer,
+              bagShippingChargeContainer,
+              bagGrandTotalContainer,
+              bagCouponContainer
+            );
+
+            paymentDetailsContainer.append(
+              paymentDetailsHeading,
+              allPricesContainer
+            );
+
+            document
+              .querySelector("#cartPage")
+              .append(cartPageProductContainer, paymentDetailsContainer);
+
+            var cartPageGrandTotal = document.querySelector(
+              "#cartPageGrandTotal>:nth-child(2)"
+            );
+
+            cartPageGrandTotal.innerText = "Rs." + totalSellingPrice;
+          } else {
+            document
+              .querySelector("#cartPage")
+              .append(cartPageProductContainer);
+          }
+        }, 0);
+        // {quantity=2
+        //   document.querySelector("#cartPage").append(cartPageProductContainer,paymentDetailsContainer)
+        // }
+      }
+
+      var cartDataForCartPage = JSON.parse(
+        localStorage.getItem("AddToCartData")
+      );
+      var numOfItemsOnCartPage = document.querySelector(
+        "#numOfItemsOnCartPage"
+      );
+      numOfItemsOnCartPage.innerText =
+        "Shopping Bag (" + cartDataForCartPage.length + ")";
+      cartDataForCartPage.reduce(function (acc, ele, ind) {
+        var cartPageProductContainer = document.createElement("div");
+        cartPageProductContainer.setAttribute(
+          "class",
+          "cartPageProductContainer"
+        );
+        var quantity = ele.qty;
+
+        var imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class", "imgDiv");
+
+        var imgOfProduct = document.createElement("img");
+        imgOfProduct.setAttribute("src", ele.img_url);
+
+        var nameOfProduct = document.createElement("span");
+        nameOfProduct.innerText = ele.name;
+
+        var removeButton = document.createElement("i");
+        removeButton.setAttribute("class", "fa-regular fa-trash-can");
+        removeButton.addEventListener("click", function () {
+          removeItem(ele, quantity);
+        });
+        imgDiv.append(imgOfProduct, nameOfProduct, removeButton);
+
+        var qtyDiv = document.createElement("div");
+        qtyDiv.setAttribute("class", "qtyDiv");
+        var plusQty = document.createElement("button");
+        plusQty.innerText = "+";
+        plusQty.addEventListener("click", function () {
+          console.log("work1");
+          plusFunction(ele.name);
+        });
+        var minusQty = document.createElement("button");
+        minusQty.innerText = "-";
+        minusQty.addEventListener("click", function () {
+          console.log("work2");
+          if (ele.qty > 1) {
+            minusFunction(ele.name);
+          }
+        });
+
+        var qtyOfProduct = document.createElement("div");
+        qtyOfProduct.setAttribute("id", "quantitiesButton");
+        qtyOfProduct.append(minusQty, quantity, plusQty);
+
+        var priceOfProduct = document.createElement("div");
+        var originalPrice = document.createElement("s");
+        var total_mrp_qty = ele.mrp * quantity;
+        originalPrice.innerText = "Rs." + total_mrp_qty;
+        var sellingPrice = document.createElement("div");
+        var total_cp_qty = ele.cp * quantity;
+        sellingPrice.innerText = "Rs." + total_cp_qty;
+        if (ele.mrp != undefined) {
+          priceOfProduct.append(originalPrice, sellingPrice);
+        } else {
+          priceOfProduct.append(sellingPrice);
+        }
+
+        qtyDiv.append(qtyOfProduct, priceOfProduct);
+
+        cartPageProductContainer.append(imgDiv, qtyDiv);
+
+        if (ind == cartDataForCartPage.length - 1) {
+          var totaling = JSON.parse(localStorage.getItem("AddToCartData"));
+          var totalMrp = totaling.reduce(function (acc, el) {
+            if (el.mrp != undefined) {
+              return (acc += el.mrp * el.qty);
+            } else {
+              return (acc += el.cp * el.qty);
+            }
+          }, 0);
+          var totalSellingPrice = totaling.reduce(function (acc, el) {
+            return (acc += el.cp * el.qty);
+          }, 0);
+          var totalDiscountPrice = totaling.reduce(function (acc, el) {
+            if (el.mrp != undefined) {
+              return (acc += el.mrp * el.qty - el.cp * el.qty);
+            } else {
+              return (acc += 0);
+            }
+          }, 0);
+          var paymentDetailsContainer = document.createElement("div");
+          paymentDetailsContainer.setAttribute("id", "paymentDetailsContainer");
+
+          var paymentDetailsHeading = document.createElement("div");
+          paymentDetailsHeading.innerText = "Payment Details";
+
+          var allPricesContainer = document.createElement("div");
+
+          var bagTotalContainer = document.createElement("div");
+          var bagTotal = document.createElement("div");
+          bagTotal.innerText = "Bag Total";
+          var bagTotalPrice = document.createElement("div");
+          bagTotalPrice.innerText = "Rs." + totalMrp;
+          bagTotalContainer.append(bagTotal, bagTotalPrice);
+
+          var bagDiscountContainer = document.createElement("div");
+          var bagDiscount = document.createElement("div");
+          bagDiscount.innerText = "Discount";
+          var bagDiscountPrice = document.createElement("div");
+          bagDiscountPrice.innerText = "-Rs." + totalDiscountPrice;
+          bagDiscountContainer.append(bagDiscount, bagDiscountPrice);
+
+          var bagSubTotalContainer = document.createElement("div");
+          var bagSubTotal = document.createElement("div");
+          bagSubTotal.innerText = "Sub Total";
+          var bagSubTotalPrice = document.createElement("div");
+          bagSubTotalPrice.innerText = "Rs." + totalSellingPrice;
+          bagSubTotalContainer.append(bagSubTotal, bagSubTotalPrice);
+
+          var bagShippingChargeContainer = document.createElement("div");
+          var bagShippingCharge = document.createElement("div");
+          bagShippingCharge.innerText = "Shipping Charge";
+          var bagShippingChargePrice = document.createElement("div");
+          bagShippingChargePrice.innerText = "Free";
+          bagShippingChargeContainer.append(
+            bagShippingCharge,
+            bagShippingChargePrice
+          );
+
+          var bagGrandTotalContainer = document.createElement("div");
+          var bagGrandTotal = document.createElement("div");
+          bagGrandTotal.innerText = "Grand Total";
+          var bagGrandTotalPrice = document.createElement("div");
+          bagGrandTotalPrice.innerText = "Rs." + totalSellingPrice;
+          bagGrandTotalContainer.append(bagGrandTotal, bagGrandTotalPrice);
+
+          var bagCouponContainer = document.createElement("div");
+          var bagCoupon = document.createElement("div");
+          bagCoupon.innerText = "Have a Coupon?";
+          var bagCouponPrice = document.createElement("div");
+          bagCouponPrice.innerText = "View Coupons";
+          bagCouponContainer.append(bagCoupon, bagCouponPrice);
+
+          allPricesContainer.append(
+            bagTotalContainer,
+            bagDiscountContainer,
+            bagSubTotalContainer,
+            bagShippingChargeContainer,
+            bagGrandTotalContainer,
+            bagCouponContainer
+          );
+
+          paymentDetailsContainer.append(
+            paymentDetailsHeading,
+            allPricesContainer
+          );
+
+          document
+            .querySelector("#cartPage")
+            .append(cartPageProductContainer, paymentDetailsContainer);
+
+          var cartPageGrandTotal = document.querySelector(
+            "#cartPageGrandTotal>:nth-child(2)"
+          );
+
+          cartPageGrandTotal.innerText = "Rs." + totalSellingPrice;
+        } else {
+          document.querySelector("#cartPage").append(cartPageProductContainer);
+        }
+      }, 0);
+      // {quantity=2
+      //   document.querySelector("#cartPage").append(cartPageProductContainer,paymentDetailsContainer)
+      // }
+      function removeItem(item, qty0) {
+        var arr = [];
+        var removeCartData = JSON.parse(localStorage.getItem("AddToCartData"));
+        removeCartData.map(function (element) {
+          if (element.name != item.name) {
+            var obj = {
+              bstsell: element.bstsell,
+              cp: element.cp,
+              discount: element.discount,
+              fe: element.fe,
+              img_url: element.img_url,
+              mrp: element.mrp,
+              name: element.name,
+              qty: element.qty,
+            };
+            // obj["qty"] = element.qty;
+            arr.push(obj);
+            localStorage.setItem("AddToCartData", JSON.stringify(arr));
+          }
+        });
+        // console.log(arr);
+        display();
+        // window.location.href = "fragrance_perfume.html";
+      }
+      function openCartFunction() {
+        var cart = document.querySelector("#cartPageContainer");
+        cart.style.transform = "translateX(0px)";
+      }
+      function closeCartFunction() {
+        var cart = document.querySelector("#cartPageContainer");
+        cart.style.transform = "translateX(400px)";
+      }
+    </script>
+    <!-- <----------------Cart Page End------------->
+    <div id="mainContainer">
+      <div id="slideshowContainer">
+        <div id="leftArrow">
+          <i class="fas fa-chevron-left" onclick="plusSlides(-1)"></i>
+        </div>
+        <div id="rightArrow" onclick="plusSlides(1)">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/626be1ef-1277-4558-ac87-808fe96df39f.jpg?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/f6c553fc-b786-478c-8785-d391ad7114b2.jpg?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/2cf62a76-95a4-48d5-b7c3-341332f510c6.jpg?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+      </div>
+    </div>
+    <div id="dotsContainer"></div>
+    <link rel="stylesheet" href="" />
+    <script src="/unit2projectr/fragrance_perfume/fragrance_perfume/autoslider.js"></script>
+    <script src="natural.js"></script>
+    <div class="wholefooter">
+      <div class="footer-container">
+        <div class="footer">
+          <div class="footer-heading footer-1">
+            <h3>
+              <img
+                src="https://tse4.mm.bing.net/th?id=OIP.kACH6frMPM7GVrB3oodlxwAAAA&pid=Api&P=0&w=229&h=165"
+                style="width: 100px; height: 50px"
+              />
+            </h3>
+            <a href="#">WHO ARE WE?</a>
+            <a href="#">CAREERS</a>
+            <a href="#">AUTHENTICITY</a>
+            <a href="#">PRESS</a>
+            <a href="#">TESTIMONIALS</a>
+            <a href="#">NYKAA CSR</a>
+            <a href="#">RESPONSIBLE DISCLOSURE</a>
+            <a href="#">INVESTOR RELATIONS</a>
+          </div>
+          <div class="footer-heading footer-2">
+            <h3 id="white">HELP</h3>
+            <a href="#">CONTACT US</a>
+            <a href="#">FREQUENTLY ASKED QUESTIONS</a>
+            <a href="#">STORE LOCATER</a>
+            <a href="#">CANCELLATION & RETURN</a>
+            <a href="#">SHIPPING & DELIVERY</a>
+            <a href="#">SELL ON NYKAA</a>
+          </div>
+          <div class="footer-heading footer-3">
+            <h3 id="white">INSPIRE ME</h3>
+            <a href="#">BEAUTY BOOK</a>
+            <a href="#">NYKAA TV</a>
+            <a href="#">NYKAA NETWORK</a>
+            <a href="#">BUYING GUIDES</a>
+          </div>
+          <div class="footer-heading footer-3">
+            <h3 id="white">QUICKS LINKS</h3>
+            <a href="#">OFFER ZONE</a>
+            <a href="#">NEW LAUNCHES</a>
+            <a href="#">NYKAA MAN</a>
+            <a href="#">NYKAA FASHION</a>
+            <a href="#">NYKAA PRO</a>
+            <a href="#">NYKAA FEMINA</a>
+            <a href="#">SITEMAP</a>
+          </div>
+          <div class="footer-heading footer-3">
+            <h3 id="white">TOP CATEGORIES</h3>
+            <a href="#">MAKEUP</a>
+            <a href="#">SKIN</a>
+            <a href="#">HAIR</a>
+            <a href="#">PERSONAL CARES</a>
+            <a href="#">APPLIANCES</a>
+            <a href="#">MOM AND BABY</a>
+            <a href="#">WELLNESS</a>
+            <a href="#">FRAGRANCES</a>
+            <a href="#">NATURAL</a>
+            <a href="#">LUXE</a>
+          </div>
+        </div>
+      </div>
+      <div id="lovediv">
+        <img
+          class="footlogo"
+          src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg"
+        />
+        <div class="some">
+          <h4>EASY RETURNS</h4>
+          <hr />
+          <li>15 Days Easy Return</li>
+          <li>For Most Products</li>
+        </div>
+        <img
+          class="footlogo"
+          src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg"
+        />
+        <div class="some">
+          <h4>EASY RETURNS</h4>
+          <hr />
+          <li>15 Days Easy Return</li>
+          <li>For Most Products</li>
+        </div>
+        <img
+          class="footlogo"
+          src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg"
+        />
+        <div class="some">
+          <h4>EASY RETURNS</h4>
+          <hr />
+          <li>15 Days Easy Return</li>
+          <li>For Most Products</li>
+        </div>
+        <img
+          class="footlogo"
+          src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg"
+        />
+        <div class="some">
+          <h4>EASY RETURNS</h4>
+          <hr />
+          <li>15 Days Easy Return</li>
+          <li>For Most Products</li>
+        </div>
+        <div class="footer-email-form">
+          <h2>SHOW US SOME LOVE ❤ ON SOCIAL MEDIA</h2>
+          <div class="media">
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg"
+              alt=""
+            />
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg"
+              alt=""
+            />
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg"
+              alt=""
+            />
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg"
+              alt=""
+            />
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="sfooter">
+        <div>
+          <p>TERMS & CONDITIONS</p>
+          <p>SHIPPING POLICY</p>
+          <p>CANCELLATION POLICY</p>
+          <p>PRIVACY POLICY</p>
+        </div>
+        <div>
+          <p>© 2021 Nykaa E-Retail Pvt. Ltd. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

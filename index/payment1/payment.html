@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Cosmetics Products & Beautiful</title>
+    <link rel="stylesheet" href="payment.css" />
+    <link
+      rel="stylesheet"
+      href="/Project/fontawesome-free-6.0.0-web/css/all.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0"
+    />
+  </head>
+  <body>
+    <div id="navBar">
+      <div id="logoNykaa">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK47iYyT-3X758RkOppaeJ6z-1UPe_ehVqq-ldzFiA_Rw3Cwv_vQY_vk0MtNo7DsZg_Eg&usqp=CAU"
+          alt=""
+        />
+      </div>
+      <div id="pages">
+        <div id="navLogin">1 - LOGIN</div>
+        <div id="navAddress">2 - ADDRESS</div>
+        <div id="navPayment">3 - PAYMENT</div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="patmentMethod">
+        <div>CHOOSE PAYMENT METHOD</div>
+        <div>Credit/Debit Card</div>
+        <div>UPI</div>
+        <div>GooglePay</div>
+        <div>Net Banking</div>
+        <div>Mobile Wallets</div>
+        <div>Cash On Delivery</div>
+        <div>Gift Card</div>
+      </div>
+      <form id="myForm">
+        <div id="cardDetails">
+          <div>Credit/Debit Card</div>
+          <input
+            type="text"
+            id="fir"
+            placeholder="Card Number"
+            required
+            minlength="16"
+            maxlength="16"
+            onkeyup="ChangeBlock(this,'sec',16)"
+          />
+          <div>
+            <div>Expiry</div>
+            <div>
+              <div>
+                <input
+                  type="number"
+                  id="sec"
+                  required
+                  placeholder="MM"
+                  minlength="2"
+                  maxlength="2"
+                  onkeyup="ChangeBlock(this,'thi',2)"
+                />
+                /
+                <input
+                  type="number"
+                  required
+                  placeholder="YY"
+                  id="thi"
+                  minlength="2"
+                  maxlength="2"
+                  onkeyup="ChangeBlock(this,'for',2)"
+                />
+              </div>
+              <div>
+                <input
+                  type="number"
+                  placeholder="CVV"
+                  id="for"
+                  minlength="3"
+                  maxlength="3"
+                />
+              </div>
+              <i class="fa-solid fa-credit-card"></i>
+              <div>Last 3 Digits at the back of the Card</div>
+            </div>
+          </div>
+          <div>
+            <input type="checkbox" />
+            <span>Save this card for Future</span>
+          </div>
+          <input type="submit" value="Pay Now" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  function ChangeBlock(current, next, l) {
+    if (current.value.length == l) {
+      document.getElementById(next).focus();
+    }
+  }
+  var myForm = document
+    .querySelector("#myForm")
+    .addEventListener("submit", function () {
+      event.preventDefault();
+      alert("OTP is send to your registered mobile number");
+      window.location.href = "otp.html";
+    });
+</script>

@@ -1,0 +1,224 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+#navBar {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0px 150px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#logoNykaa img {
+  width: 110px;
+  height: 70px;
+}
+#pages {
+  margin-left: 150px;
+  display: flex;
+}
+#navLogin {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+  height: 65px;
+  width: 200px;
+  box-sizing: border-box;
+  line-height: 60px;
+  padding-left: 10px;
+  color: #3f414d;
+  border-left: #a5a5ac 0.1px solid;
+}
+#navAddress {
+  cursor: pointer;
+  border-left: #a5a5ac 0.1px solid;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 10px;
+  line-height: 60px;
+  margin-top: 5px;
+  height: 65px;
+  width: 200px;
+  box-sizing: border-box;
+  border-left: #a5a5ac 0.1px solid;
+  border-right: #a5a5ac 0.1px solid;
+}
+#navPayment {
+  border-right: #a5a5ac 0.1px solid;
+  color: #3f414d;
+  cursor: pointer;
+  color: #fc2779;
+  border-bottom: #fc2779 solid;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 60px;
+  margin-top: 5px;
+  height: 65px;
+  width: 200px;
+  box-sizing: border-box;
+}
+#container {
+  width: 50%;
+  box-sizing: border-box;
+  /* padding: 0px 20%; */
+  display: flex;
+  margin: auto;
+  margin-top: 100px;
+}
+#patmentMethod {
+  width: 300px;
+  box-sizing: border-box;
+  background-color: white;
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 0px 0px 0px 10px;
+  color: #3f414d;
+  border-radius: 2px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#patmentMethod > div {
+  box-sizing: border-box;
+  height: 45px;
+  line-height: 40px;
+  padding-left: 10px;
+  border-bottom: solid 0.7px rgb(197, 189, 189);
+}
+#patmentMethod > :nth-child(1) {
+  background: none;
+  border: none;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 130px;
+  font-weight: bold;
+}
+#patmentMethod > :nth-child(2) {
+  color: #fc2779;
+  border-right: #fc2779 solid 3px;
+  margin-top: 0;
+  font-weight: bold;
+}
+#patmentMethod > :nth-child(8) {
+  border: none;
+}
+#cardDetails {
+  width: 400px;
+  background-color: white;
+  padding: 0px 10px 10px 10px;
+  border-radius: 2px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#cardDetails > :nth-child(1) {
+  width: 98%;
+  box-sizing: border-box;
+  height: 45px;
+  font-weight: bold;
+  line-height: 40px;
+  padding-left: 10px;
+  border-bottom: solid 0.7px rgb(197, 189, 189);
+}
+#cardDetails > :nth-child(2) {
+  margin-left: 2%;
+  margin-top: 30px;
+  width: 95%;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-bottom: solid 0.7px rgb(197, 189, 189);
+}
+#cardDetails > :nth-child(3) {
+  margin-left: 2%;
+  margin-top: 25px;
+}
+#cardDetails > :nth-child(3) > :nth-child(1) {
+}
+#cardDetails > :nth-child(3) > :nth-child(2) {
+  display: flex;
+  line-height: 40px;
+  /* font-size: 30px; */
+}
+#cardDetails > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+  display: flex;
+  width: 100px;
+  height: 20px;
+  height: 40px;
+  font-size: 20px;
+  border-bottom: solid 0.7px rgb(197, 189, 189);
+}
+#cardDetails > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+  width: 40px;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+#cardDetails > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+  width: 70px;
+  margin-left: 15px;
+  outline: none;
+  border: none;
+}
+#cardDetails > :nth-child(3) > :nth-child(2) > :nth-child(2) > input {
+  width: 50px;
+  height: 20px;
+  border: solid black;
+  height: 35px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  border-bottom: solid 0.7px rgb(197, 189, 189);
+}
+#cardDetails > :nth-child(3) > :nth-child(2) > :nth-child(3) {
+  font-size: 30px;
+  margin-left: 20px;
+  color: #3f414d;
+}
+#cardDetails > :nth-child(3) > :nth-child(2) > :nth-child(4) {
+  width: 140px;
+  line-height: normal;
+  margin-left: 10px;
+  color: #3f414d;
+  border: solid black;
+  height: 40px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+#cardDetails > :nth-child(4) {
+  margin-top: 10px;
+  height: 40px;
+  margin-left: 2%;
+  width: 95%;
+}
+#cardDetails > :nth-child(4) > :nth-child(1) {
+  width: 20px;
+  height: 20px;
+}
+#cardDetails > :nth-child(4) > :nth-child(2) {
+  height: 40px;
+  line-height: 40px;
+  color: #3f414d;
+  margin-left: 10px;
+  position: relative;
+  top: -5px;
+}
+#cardDetails > :nth-child(5) {
+  margin-left: 2%;
+  margin-top: 30px;
+  width: 95%;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background-color: #fc2779;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}

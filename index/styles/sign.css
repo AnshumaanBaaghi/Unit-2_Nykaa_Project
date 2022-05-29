@@ -1,0 +1,38 @@
+.box {
+  background-color: white;
+  height: 600px;
+  width: 23%;
+  margin: 80px auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+
+.start {
+  background-color: white;
+  padding: 30px;
+}
+.signpara {
+  font-weight: lighter;
+  text-align: center;
+  margin: 8px;
+  padding-top: 10px;
+  margin-left: 2px;
+}
+.num {
+  background-color: #ec407a;
+  text-align: center;
+  height: 35px;
+  margin: 5px auto;
+  padding: 5px;
+  color: white;
+  width: 100%;
+  margin-left: 6px;
+}
+input {
+  width: 100%;
+  margin: auto;
+  height: 35px;
+  background-color: #fafafa;
+  border: 1px solid palevioletred;
+  padding-top: 10px;
+}

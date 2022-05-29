@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="shortcut icon"
+    href="https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0"
+  />
+  <link rel="stylesheet" href="./styles/manualSlider.css" />
+  <link rel="stylesheet" href="./styles/cart.css" />
+  <link
+    rel="stylesheet"
+    href="./fontawesome-free-6.0.0-web/fontawesome-free-6.0.0-web/css/all.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:ital,wght@0,500;1,300;1,500&family=Smooch&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles/autoSilder.css" /> 
+    <link rel="stylesheet" href="./styles/navbaar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+
+  <title>Auto Slide</title>
+  <style>
+    #container{
+      width:100%;
+       /* height: 800px;  */
+       margin-top:20px;
+    }
+    h2{
+      margin-left: 130px;
+      text-align: center; 
+      font-size: 32px;
+      font-family: Inter;
+      font-weight: 600; color: #001325;
+    }
+    #class{
+      width: 100%; 
+      height: 400px;  
+      display: flex; 
+      justify-content: center; 
+      margin: auto; 
+      gap: 20px;
+    }
+    .div{
+      height: 350;
+    }
+    p{
+      text-align: center; 
+      font-size: 20px;
+    }
+    #class1{
+      width: 100%; 
+      height: 380px; 
+      display: flex; 
+      justify-content: center; 
+      margin: auto; 
+      gap: 20px; 
+      margin-top: -2.5em;
+    }
+    #shop{
+      width:100%; 
+      height:340px;
+      justify-content: center;
+      margin: auto;
+      margin-top: -1.5em;
+      background-color: #F7F7F7;
+    }
+    #shop1{
+      text-align: center; 
+      font-size: 32px;
+      font-family: Inter;
+      font-weight: 600; 
+      color: #001325;
+      padding: 20px;
+    }
+    #shop2{
+      width: 95%; 
+      height: 120px;
+       display: flex; 
+       justify-content: center; 
+       margin: auto; 
+       gap: 8px; 
+       margin-top: -0.8em;
+    }
+    .shop3{
+      padding: 7px;
+    }
+    .shop4{
+      width: 95%; 
+      height: 120px; 
+      display: flex; 
+      justify-content: center; 
+      margin: auto; 
+      gap: 8px;
+      background-color: #F7F7F7;
+    }
+    #best{
+      width: 100%; 
+      height: 420px; 
+      background-color: #F7F7F7;
+      /* border: 1px solid red; */
+    }
+    #best1{
+      text-align: center; 
+      font-size:30px; 
+      font-family: Inter;
+      font-weight:600;
+      color: #001325;
+    }
+    #best3{
+      width: 100%;
+       height: 350px; 
+       display: flex; 
+       justify-content: center; 
+       margin: auto; gap: 20px;
+    }
+    .best4{
+      width: 100%; 
+      height: 150px;
+      padding-top: 20px;
+      justify-content: center;
+      background-color: #F7F7F7;
+    }
+    .best5{
+      height: 300px; 
+      text-align: center;
+    }
+    #buys{
+      width:100%; 
+      height: 400px;
+      background-color: #F7F7F7;
+      padding-top: 30px;
+      justify-content: center;
+    }
+    #buys1{
+      text-align: center; 
+      font-size: 32px;
+      font-family: Inter;
+      /* letter-spacing: 0rem; */
+      font-weight: 600; 
+      color: #001325;
+    }
+    #buys3{
+      width: 100%;
+       height: 400px; 
+       display: flex; 
+       justify-content: center; 
+       margin: auto; 
+       gap: 20px;
+       margin-top: 20px;
+    }
+    #brands{
+      width:100%; 
+      height: 150px;
+      background-color: #F7F7F7;
+      padding-top: 30px;
+      justify-content: center;
+    }
+    #brands1{
+      text-align: center; 
+      font-size: 32px;
+      font-family: Inter;
+      /* letter-spacing: 0rem; */
+      font-weight: 600; 
+      color: #001325;
+      margin-top:-2.5em
+    }
+    #brands2{
+      width: 100%;
+       height: 150px; 
+       display: flex; 
+       justify-content: center; 
+       margin: auto; 
+       gap: 20px; 
+       margin-top: 20px;
+    }
+    #brands3{
+      width: 100%;
+      height: 200px; 
+      display: flex; 
+      justify-content: center; 
+      margin: auto; 
+      gap: 20px; 
+      margin-top:-0.5em;
+      background-color: #F7F7F7;
+  }
+  #img{
+    width: 100%; 
+    height: 150px;
+    padding-top: 20px;
+    justify-content: center;
+    background-color: #F2FFF2;
+  }
+  #img0{
+    height: 300px;
+    text-align: center;
+  }
+  #img2{
+     width: 100%;
+     height: 400px; 
+     background-color: #F2FFF2;
+     /* border: 1px solid red; */
+  }
+  #img3{
+    width: 100%; 
+    height: 350px; 
+    display: flex; 
+    margin: auto; 
+    gap: 20px;
+    /* border: 1px solid red; */
+  }
+  #now{
+    width: 100%; 
+    height: 770px; 
+    background-color: #F7F7F7;
+    margin: auto;
+    /* border: 1px solid red; */
+  }
+  #now1{
+    text-align: center; 
+    font-size: 32px;
+    font-family: Inter;
+    font-weight: 600; 
+    color: #001325;
+    padding:20px;
+  }
+  #now2{
+    width: 100%; 
+    height: 400px; 
+    display: flex; 
+    justify-content: center;
+    margin: auto; 
+    gap: 20px; 
+    margin-top:-1.5em;
+  }
+  #now3{
+    width: 100%; 
+    height: 400px; 
+    margin-top:-1.5em; 
+    display: flex;
+    justify-content: center; 
+    margin: auto; 
+    gap: 20px;
+    margin-top: -5.0em;
+    background-color: #F7F7F7;
+  }
+  #add{
+    width:100%; 
+    height:600px;
+    background-color: #F7F7F7;
+    margin-top:-2.5em;
+  }
+  #add1{
+    text-align: center; 
+    font-size: 32px;
+    font-family: Inter;
+    letter-spacing: 0rem;
+    font-weight: 600; 
+    color: #001325;padding: 10px;
+  }
+  #add2{
+    width: 100%;
+    height: 500px; 
+    display: flex; 
+    justify-content: center; 
+    margin: auto; 
+    gap: 20px;
+  }
+  #st{
+    width: 100%;
+     height: 100px;
+     padding-top: 60px;
+     justify-content: center;
+     background-color: #F7F7F7;
+  }
+  #st2{
+    height: 200px;
+    text-align: center;
+    background-color: #F7F7F7;
+  }
+  </style>
+  </head>
+  <body>
+    <div id="navigationBar">
+      <div class="nav">
+        <div class="left">
+          BEAUTY BONANZA Get Your Daily Dose Of Amazing Deals
+        </div>
+        <div class="right1">
+          <div>
+            <i class="fas fa-mobile-alt"></i>
+            <a target="_blank" href="https://www.nykaa.com/installApp"
+              >Get App</a
+            >
+          </div>
+          <div>
+            <i class="fas fa-map-marker-alt"></i>
+            <a
+              target="_blank"
+              href="https://www.nykaa.com/stores-n-events-desktop"
+              >Stores & Events</a
+            >
+          </div>
+          <div>
+            <i class="fas fa-gift"></i>
+            <a target="_blank" href="https://www.nykaa.com/giftcard/list"
+              >Gift Card</a
+            >
+          </div>
+          <div>
+            <i class="far fa-question-circle"></i>
+            <a target="_blank" href="https://support.nykaa.com/">Help</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav1">
+        <div class="left1">
+          <a href="/home.html">
+            <img
+            class="nikaimg"
+            src="https://jobs.socialsamosa.com/wp-content/uploads/2018/07/Nykaa-logo.png"
+            alt="NYKAA LOGO"
+          />
+          </a>
+          <div class="nyka">
+            <a href="">CATEGORIES</a>
+            <a href="">BRANDS</a>
+            <a href="">NYKAA FASHION</a>
+            <a href="">BEAUTY ADVICE</a>
+            <a href="">NYKAA NETWORK</a>
+          </div>
+        </div>
+
+        <div class="right">
+          <div>
+            <input type="text" placeholder="Search On Nykaa" />
+            <i class="fas fa-user"></i>
+            <a class="space" target="_blank" href="/signup.html">Account</a>
+            <i class="fas fa-shopping-bag" onclick="openCartFunction()"></i>
+          </div>
+        </div>
+      </div>
+      <div class="nav2">
+        <div>
+          <a href="/nykaa/skinMainPage.html">Skin</a>
+          <a href="/nykaa/makeupMainPage.html">Makeup</a>
+          <a href="/unit2projectr/Auto Slider/naturalHome.html">Hair</a>
+          <a href="/unit2projectr/Auto Slider/personalHome.html">Presonal Care</a>
+          <a href="/unit2projectr/Auto Slider/naturalHome.html">Natural</a>
+          <a href="/Project-Unit-2/Project-Unit-2/Mom_baby1.html">Mom & baby</a>
+          <a href="/Project-Unit-2/Project-Unit-2/Health_Wellness.html">Health & Wellness</a>
+          <a href="/men/men.html">Men</a>
+          <a href="/Project/fragrance/fragrance.html">Fragrance</a>
+          <a href="">LINUX</a>
+        </div>
+      </div>
+    </div>
+    <!-- <----------------Cart Page Start-------------> 
+      <div id="cartPageContainer">
+        <div id="cartPageHeading">
+          <div>
+            <i class="fas fa-chevron-left" onclick="closeCartFunction()"></i>
+          </div>
+          <div id="numOfItemsOnCartPage"></div>
+        </div>
+        <div id="cartPage"></div>
+        <div id="proceedContainer">
+          <div id="cartPageGrandTotal">
+            <div>Grand total:</div>
+            <div></div>
+          </div>
+          <div>
+            <span onclick="window.location.href='/payment1/address.html'">PROCEED</span>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+  <script>
+    var quantity=1;
+    var cartDataForCartPage = JSON.parse(localStorage.getItem("AddToCartData"))
+    var numOfItemsOnCartPage = document.querySelector("#numOfItemsOnCartPage");
+    numOfItemsOnCartPage.innerText = "Shopping Bag ("+cartDataForCartPage.length+")";
+    cartDataForCartPage.reduce(function(acc,ele,ind)
+    {
+      var cartPageProductContainer = document.createElement("div");
+      cartPageProductContainer.setAttribute("class","cartPageProductContainer");
+  
+      var imgDiv = document.createElement("div");
+      imgDiv.setAttribute("class","imgDiv");
+  
+      var imgOfProduct = document.createElement("img");
+      imgOfProduct.setAttribute("src",ele.img_url);
+      
+      var nameOfProduct = document.createElement("span");
+      nameOfProduct.innerText = ele.name;
+  
+      var removeButton = document.createElement("i");
+      removeButton.setAttribute("class","fa-regular fa-trash-can");
+      imgDiv.append(imgOfProduct,nameOfProduct,removeButton)
+  
+  
+      
+      var qtyDiv = document.createElement("div");
+      qtyDiv.setAttribute("class","qtyDiv");
+      var plusQty = document.createElement("span");
+      plusQty.innerText = "+";
+      plusQty.addEventListener("click",function()
+      {
+        quantity++;
+      })
+      var minusQty = document.createElement("span");
+      minusQty.innerText = "-";
+      minusQty.addEventListener("click",function()
+      {
+        quantity--;
+      })
+      
+      var qtyOfProduct = document.createElement("div");
+      qtyOfProduct.innerText= minusQty.innerText+quantity+plusQty.innerText;
+  
+      var priceOfProduct = document.createElement("div");
+      var originalPrice = document.createElement("s");
+      originalPrice.innerText = "Rs."+ ele.mrp
+      var sellingPrice = document.createElement("div")
+      sellingPrice.innerText = "Rs."+ ele.cp
+      if(ele.mrp != undefined)
+      {
+        priceOfProduct.append(originalPrice,sellingPrice)
+      }
+      else{
+        priceOfProduct.append(sellingPrice)
+  
+      }
+  
+      qtyDiv.append(qtyOfProduct,priceOfProduct)
+  
+  
+      cartPageProductContainer.append(imgDiv,qtyDiv)
+  
+      if(ind == (cartDataForCartPage.length-1))
+      {
+        var paymentDetailsContainer = document.createElement("div");
+        paymentDetailsContainer.setAttribute("id","paymentDetailsContainer");
+  
+        var paymentDetailsHeading = document.createElement("div");
+        paymentDetailsHeading.innerText = "Payment Details";
+  
+        var allPricesContainer = document.createElement("div");
+  
+        var bagTotalContainer = document.createElement("div");
+        var bagTotal = document.createElement("div");
+        bagTotal.innerText="Bag Total";
+        var bagTotalPrice = document.createElement("div");
+        bagTotalPrice.innerText="Rs.num";
+        bagTotalContainer.append(bagTotal,bagTotalPrice)
+  
+        var bagDiscountContainer = document.createElement("div");
+        var bagDiscount= document.createElement("div");
+        bagDiscount.innerText="Discount";
+        var bagDiscountPrice = document.createElement("div");
+        bagDiscountPrice.innerText="Rs.num";
+        bagDiscountContainer.append(bagDiscount,bagDiscountPrice)
+  
+        var bagSubTotalContainer = document.createElement("div");
+        var bagSubTotal= document.createElement("div");
+        bagSubTotal.innerText="Sub Total";
+        var bagSubTotalPrice = document.createElement("div");
+        bagSubTotalPrice.innerText="Rs.num";
+        bagSubTotalContainer.append(bagSubTotal,bagSubTotalPrice)
+  
+        var bagShippingChargeContainer = document.createElement("div");
+        var bagShippingCharge= document.createElement("div");
+        bagShippingCharge.innerText="Shipping Charge";
+        var bagShippingChargePrice = document.createElement("div");
+        bagShippingChargePrice.innerText="Free";
+        bagShippingChargeContainer.append(bagShippingCharge,bagShippingChargePrice)
+  
+        var bagGrandTotalContainer = document.createElement("div");
+        var bagGrandTotal= document.createElement("div");
+        bagGrandTotal.innerText="Grand Total";
+        var bagGrandTotalPrice = document.createElement("div");
+        bagGrandTotalPrice.innerText="num";
+        bagGrandTotalContainer.append(bagGrandTotal,bagGrandTotalPrice)
+  
+        var bagCouponContainer = document.createElement("div");
+        var bagCoupon= document.createElement("div");
+        bagCoupon.innerText="Have a Coupon?";
+        var bagCouponPrice = document.createElement("div");
+        bagCouponPrice.innerText="View Coupons";
+        bagCouponContainer.append(bagCoupon,bagCouponPrice)
+  
+        allPricesContainer.append(bagTotalContainer,bagDiscountContainer,bagSubTotalContainer,bagShippingChargeContainer,bagGrandTotalContainer,bagCouponContainer)
+  
+        paymentDetailsContainer.append(paymentDetailsHeading,allPricesContainer)
+  
+        document.querySelector("#cartPage").append(cartPageProductContainer,paymentDetailsContainer)
+  
+        var cartPageGrandTotal = document.querySelector("#cartPageGrandTotal>:nth-child(2)");
+        cartPageGrandTotal.innerText = "num";
+      }
+      else{
+  
+        document.querySelector("#cartPage").append(cartPageProductContainer)
+      }
+  
+    },0)
+    // {quantity=2
+    //   document.querySelector("#cartPage").append(cartPageProductContainer,paymentDetailsContainer)
+    // }
+    
+    function openCartFunction() {
+      var cart = document.querySelector("#cartPageContainer");
+      cart.style.transform = "translateX(0px)";
+    }
+    function closeCartFunction()
+    {
+      var cart = document.querySelector("#cartPageContainer");
+      cart.style.transform = "translateX(400px)";
+    }
+  </script>
+  <!-- <----------------Cart Page End-------------> 
+    <div id="mainContainer">
+      <div id="slideshowContainer">
+        <div id="leftArrow">
+          <i class="fas fa-chevron-left" onclick="plusSlides(-1)"></i>
+        </div>
+        <div id="rightArrow" onclick="plusSlides(1)">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/b13dc4a1-3051-44a4-a32c-85f297db7062.jpg?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/32c0faee-34f6-4067-9dcf-13cc2a99a6e3.jpg?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/913b40c3-47aa-4523-8738-cc716f4c3f9e.jpg?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/fb223fe5-a602-4f82-bebe-fe181a12a88e.gif?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+        <div class="imageContainer">
+          <img
+            src="https://images-static.nykaa.com/uploads/99dae409-0b45-4359-a908-9a2b338bb63a.gif?tr=w-1200,cm-pad_resize
+          "
+            alt="Loaing..."
+          />
+        </div>
+      </div>
+    </div>
+    <div id="dotsContainer"></div>
+       <div id="container">
+        <h2>BRANDS YOU WILL LOVE</h2>
+          <div id="class">
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/aa83e002-ed4a-40d7-ad50-1c8d7cf80156.jpg?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Buy 2 Get 1 on Bestsellers</p>
+            </div>
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/ca23140e-6892-4129-b6ff-87c10365ede6.jpg?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Up to 20% off</p>
+            </div>
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/a2fdf6e4-f01c-4dba-8585-353d5bb19e07.jpg?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Up to 15% off</p> 
+            </div>
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/3278d2cd-5f93-4fc4-b6e0-8c5e657900ed.jpg?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Up to 20% off</p> 
+            </div>
+          </div>
+
+          <div id="class1">
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/7cfb1cb7-a9bd-4d2c-9d87-4ff52142c1b3.gif?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Up to 25% off</p>
+            </div>
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/863c96ea-2f5c-4ed8-ad7c-ae51fa34b620.jpeg?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Up to 30% off</p>
+            </div>
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/fd201ee4-1be4-4ea8-93c2-a3319cf2b0c8.jpeg?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Up to 25% off</p>
+            </div>
+            <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/8f6ff449-ad58-48ae-87c4-2c4a395637f4.jpg?tr=w-300,cm-pad_resize
+              "/></a>
+              <p>Up to 15% off</p>
+            </div>
+          </div>
+          <div id="shop">
+            <h2 id ="shop1">
+              SHOP BY CATEGORY</h2>
+              <div id="shop2">
+                <div class="shop3"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/537d8258-20b9-45c9-ad14-8ac8f5a64e2b.jpg?tr=w-300,cm-pad_resize
+                  "/></a>
+                </div>
+                <div><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/e1739f8c-d214-4a1d-bc87-df6a6b66f204.jpg?tr=w-300,cm-pad_resize
+                  "/></a>
+                </div>
+                <div><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/90709376-4b26-4015-9686-1d3cdd0025af.jpg?tr=w-300,cm-pad_resize
+                  "/></a>
+                </div>
+                <div><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/0b227d6c-3906-43f0-9676-d90fa4fd2af2.jpg?tr=w-300,cm-pad_resize
+                  "/> </a>
+                </div>
+              </div>
+              <div class="shop4">
+                <div><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/537d8258-20b9-45c9-ad14-8ac8f5a64e2b.jpg?tr=w-300,cm-pad_resize
+                  "/></a>
+                </div>
+                <div><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/e1739f8c-d214-4a1d-bc87-df6a6b66f204.jpg?tr=w-300,cm-pad_resize
+                  "/></a>
+                </div>
+                <div><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/90709376-4b26-4015-9686-1d3cdd0025af.jpg?tr=w-300,cm-pad_resize
+                  "/></a>
+                </div>
+                <div><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/0b227d6c-3906-43f0-9676-d90fa4fd2af2.jpg?tr=w-300,cm-pad_resize
+                  "/> </a>
+                </div>
+              </div>
+          </div>
+          <div id="best">
+            <h2 id="best1">BESTSELLERS</h2>
+              <div id="best3">
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/a43c6738-364c-4b9c-805d-780a3852a781.jpg?tr=w-240,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/5acbec8a-bf3c-4a6e-9b99-982254132a23.jpg?tr=w-240,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/2bf8ffa0-e40e-417d-92eb-5df96d488849.jpg?tr=w-240,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/ab620c41-f2c1-4362-a695-6202155bb3ed.jpg?tr=w-240,cm-pad_resize"/></a> 
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/ed382054-731b-4175-9e35-f9f637398ca1.jpg?tr=w-1200,cm-pad_resize"/></a>
+                  <a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html"><img src="https://images-static.nykaa.com/uploads/23326ccf-8523-4283-9bd6-317f7d4296c1.jpg?tr=w-240,cm-pad_resize"/></a> 
+                </div>
+              </div>
+          </div> 
+          <div class="best4">
+            <div class="best5"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/ed382054-731b-4175-9e35-f9f637398ca1.jpg?tr=w-1200,cm-pad_resize"/>
+            </div>
+          </div>
+          <div class="best4" >
+            <div ><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+              <img src="https://images-static.nykaa.com/uploads/88f40666-10ef-45b5-82a3-1981b2424c5d.png?tr=w-1200,cm-pad_resize"/></a>
+            </div>
+          </div>
+          <div id="buys">
+            <h2 id ="buys1">
+              BUDGET BUYS</h2>
+              <div id="buys3">
+                <div  class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/61c4791e-d748-4fb3-be36-df9f3af99537.jpg?tr=w-300,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/999c35ab-fdfd-47db-b029-5320a369639a.jpg?tr=w-300,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/00c70ff6-3554-4ecf-af5f-bd4a43d3643b.jpg?tr=w-300,cm-pad_resize"/></a>
+               </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/9c45ccbf-b173-45f3-a610-5624f11eab60.jpg?tr=w-300,cm-pad_resize"/></a>
+                </div>
+              </div>
+          </div>
+          <div id ="brands">
+            <h2 id="brands1">FEATURED BRANDS</h2>
+              <div id="brands2">
+                <div  class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/69be5a28-e437-405b-9240-05730b9ede4b.jpg?tr=w-240,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/bd64168e-d25b-4a08-8f8b-d828b09f27b1.jpg?tr=w-240,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/1af8698f-f4bf-409e-be24-5323376cdba5.jpg?tr=w-240,cm-pad_resize"/></a>
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/5b848f20-4e21-4821-bd39-97a7ede99847.jpg?tr=w-240,cm-pad_resize"/></a> 
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/c0b31347-2ce9-4450-8ae6-3c206e17b875.jpg?tr=w-240,cm-pad_resize"/></a> 
+                </div>
+              </div>
+              <div id="brands3">
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/17d149c8-7397-49b2-ba3d-44b122d888e2.jpg?tr=w-240,cm-pad_resize"/></a> 
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/f00becc5-eaa2-4bea-bb79-308ed1367aa2.jpg?tr=w-240,cm-pad_resize"/></a> 
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/cc375fd5-6247-44cb-a439-6ca7c00c3c56.jpg?tr=w-240,cm-pad_resize"/></a> 
+                </div>
+                <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/4172470f-05c1-4ac1-ab9f-954bd2af3f76.jpg?tr=w-240,cm-pad_resize"/> </a>
+                </div>
+              </div>
+              <div id="img">
+                <div id="img0"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                  <img src="https://images-static.nykaa.com/uploads/22752905-88d9-4f21-9475-8466d986fa33.png?tr=w-1200,cm-pad_resize"/></a>
+                </div>
+              </div>
+               <div id="img2">
+                  <div id ="img3">
+                    <div  class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                      <img src="https://images-static.nykaa.com/uploads/90972aee-6552-47b5-963a-9372054d7a00.jpg?tr=w-200,cm-pad_resize"/></a>
+                    </div>
+                    <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                      <img src="https://images-static.nykaa.com/uploads/f92749d3-71fa-42fb-969a-f0ac078f454d.jpg?tr=w-200,cm-pad_resize"/></a>
+                    </div>
+                    <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                      <img src="https://images-static.nykaa.com/uploads/8addd129-dcf4-418b-9e63-6dc32847c205.jpg?tr=w-200,cm-pad_resize"/></a>
+                    </div>
+                  </div>
+                </div> 
+                <div id="now">
+                  <h2 id="now1">TRENDING NOW</h2>
+                    <div id="now2">
+                      <div  class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                        <img src="https://images-static.nykaa.com/uploads/cecace7d-9bb7-49a9-ba50-aa6a716e511f.jpg?tr=w-600,cm-pad_resize"/></a>
+                      </div>
+                      <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                        <img src="https://images-static.nykaa.com/uploads/e4a86231-3c25-40b2-9af5-25d9a0a15b45.jpg?tr=w-600,cm-pad_resize"/></a>
+                      </div>
+                    </div>
+                    <div id="now3">
+                      <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                        <img src="https://images-static.nykaa.com/uploads/61d47d5a-d5b1-4c5d-be66-2d9f0936a9fd.jpg?tr=w-600,cm-pad_resize"/></a>
+                      </div>
+                      <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                        <img src="https://images-static.nykaa.com/uploads/ba2a185e-682a-44a0-9b5b-4f2166309d42.jpg?tr=w-600,cm-pad_resize"/></a>
+                      </div>
+                    </div>
+                 </div> 
+                 <div id="add">
+                  <h2 id="add1">
+                    BEAUTY ADVICE</h2>
+                    <div id="add2">
+                      <div  class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                        <img src="https://images-static.nykaa.com/uploads/cc48e02a-5038-4b4a-ba97-158e326e6ef0.jpg?tr=w-400,cm-pad_resize"/></a>
+                      </div>
+                      <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                        <img src="https://images-static.nykaa.com/uploads/76641667-6eed-4abb-8842-58e831fe9ce8.jpg?tr=w-400,cm-pad_resize"/></a>
+                      </div>
+                      <div class="div"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                        <img src="https://images-static.nykaa.com/uploads/3e2290b5-1c4a-428f-9d15-8bb06c43af21.jpg?tr=w-400,cm-pad_resize"/></a>
+                      </div>
+                    </div>
+                </div>
+                <div id="st">
+                  <div id="st2"><a href="../fragrance_perfume/fragrance_perfume/fragrance_perfume.html">
+                    <img src="https://images-static.nykaa.com/uploads/88f40666-10ef-45b5-82a3-1981b2424c5d.png?tr=w-1200,cm-pad_resize"/></a>
+                  </div>
+                </div>
+                <div class="wholefooter" style="height: 500px;">
+                  <div class="footer-container">
+                    <div class="footer">
+                      <div class="footer-heading footer-1">
+                        <p>
+                          <img
+                            src="https://tse4.mm.bing.net/th?id=OIP.kACH6frMPM7GVrB3oodlxwAAAA&pid=Api&P=0&w=229&h=165"
+                            style="width: 100px; height: 50px;"
+                          />
+                        </p style="font-size: 12px;">
+                        <a href="#"style="font-size: 11.5px;">WHO ARE WE?</a>
+                        <a href="#"style="font-size: 11.5px;">CAREERS</a>
+                        <a href="#"style="font-size: 11.5px;">AUTHENTICITY</a>
+                        <a href="#"style="font-size: 11.5px;">PRESS</a>
+                        <a href="#"style="font-size: 11.5px;">TESTIMONIALS</a>
+                        <a href="#"style="font-size: 11.5px;">NYKAA CSR</a>
+                        <a href="#"style="font-size: 11.5px;">RESPONSIBLE DISCLOSURE</a>
+                        <a href="#"style="font-size: 11.5px;">INVESTOR RELATIONS</a>
+                      </div>
+                      <div class="footer-heading footer-2">
+                        <p style="font-size: 12px;margin-right: 85px;"id="white">HELP</p>
+                        <a href="#"style="font-size: 11.5px;">CONTACT US</a>
+                        <a href="#"style="font-size: 11.5px;">FREQUENTLY ASKED QUESTIONS</a>
+                        <a href="#"style="font-size: 11.5px;">STORE LOCATER</a>
+                        <a href="#"style="font-size: 11.5px;">CANCELLATION & RETURN</a>
+                        <a href="#"style="font-size: 11.5px;">SHIPPING & DELIVERY</a>
+                        <a href="#"style="font-size: 11.5px;">SELL ON NYKAA</a>
+                      </div>
+                      <div class="footer-heading footer-3">
+                        <p style="font-size: 12px;margin-right: 85px;"id="white">INSPIRE ME</p>
+                        <a href="#"style="font-size: 11.5px;">BEAUTY BOOK</a>
+                        <a href="#"style="font-size: 11.5px;">NYKAA TV</a>
+                        <a href="#"style="font-size: 11.5px;">NYKAA NETWORK</a>
+                        <a href="#"style="font-size: 11.5px;">BUYING GUIDES</a>
+                      </div>
+                      <div class="footer-heading footer-3">
+                        <p style="font-size: 12px;margin-right: 85px;"id="white">QUICKS LINKS</p>
+                        <a href="#"style="font-size: 11.5px;">OFFER ZONE</a>
+                        <a href="#"style="font-size: 11.5px;">NEW LAUNCHES</a>
+                        <a href="#"style="font-size: 11.5px;">NYKAA MAN</a>
+                        <a href="#"style="font-size: 11.5px;">NYKAA FASHION</a>
+                        <a href="#"style="font-size: 11.5px;">NYKAA PRO</a>
+                        <a href="#"style="font-size: 11.5px;">NYKAA FEMINA</a>
+                        <a href="#"style="font-size: 11.5px;">SITEMAP</a>
+                      </div>
+                      <div class="footer-heading footer-3">
+                        <p style="font-size: 12px;margin-right: 85px;"id="white">TOP CATEGORIES</p>
+                        <a href="#"style="font-size: 11.5px;">MAKEUP</a>
+                        <a href="#"style="font-size: 11.5px;">SKIN</a>
+                        <a href="#"style="font-size: 11.5px;">HAIR</a>
+                        <a href="#"style="font-size: 11.5px;">PERSONAL CARES</a>
+                        <a href="#"style="font-size: 11.5px;">APPLIANCES</a>
+                        <a href="#"style="font-size: 11.5px;">MOM AND BABY</a>
+                        <a href="#"style="font-size: 11.5px;">WELLNESS</a>
+                        <a href="#"style="font-size: 11.5px;">FRAGRANCES</a>
+                        <a href="#"style="font-size: 11.5px;">NATURAL</a>
+                        <a href="#"style="font-size: 11.5px;">LUXE</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="lovediv" style=" background-color: #F7F7F7;height: 270px; ">
+            
+                      <img style="margin-top: -2.5em;"class="footlogo" src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg" >
+                    <div class="some" style="margin-top: -1.5em;">
+                       
+                      <p style="font-size: 14px;">FREE SHIPPING</p style="font-size: 14px;">
+                      <hr>
+                      <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">for orders above</li>
+                      <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">INR299</li>
+            
+                    </div>
+                    <img style="margin-top: -2.5em;" class="footlogo" src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg" >
+                    <div class="some" style="margin-top: -1.5em;">
+                        
+                        <p style="font-size: 14px;">EASY RETURNS</p style="font-size: 14px;">
+                        <hr>
+                        <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">15 Days Easy Return</li>
+                        <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">For Most Products</li>
+            
+                    </div>
+                    <img style="margin-top: -2.5em;"class="footlogo" src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg" >
+                    <div class="some" style="margin-top: -1.5em;">
+                      <p style="font-size: 14px;">AUTHENTIC PRODUCTS</p style="font-size: 14px;">
+                      <hr>
+                      <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">Sourced Directly from</li>
+                      <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">Brands/ Authorised Distributors</li>
+            
+                    </div>
+                    <img style="margin-top: -2.5em;"class="footlogo" src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg" >
+                    <div class="some" style="margin-top: -1.5em;">
+                      <p style="font-size: 14px;">2400+ BRANDS</p style="font-size: 14px;">
+                      <hr>
+                      <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">Well Curated 1.9 Lakh </li>
+                      <li style=" font-size: 12px;font-weight: 300;line-height: 15px;">+ Product</li> 
+                    </div>
+                    <div style="margin-top: -2.5em;"class="footer-email-form" style=" width:100%;">
+                        <p style="margin-top: -1.5em;font-size: 12px;font-weight: 400;line-height: 20px;padding: 0 15px;">SHOW US SOME LOVE ❤ ON SOCIAL MEDIA</p>
+                        <div class="media" style="margin-left: 10px; text-align: center;">
+                          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg" alt="">
+                          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg" alt="">
+                          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg" alt="">
+                          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg" alt="">
+                          <img src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg" alt="">
+                        </div>
+                     </div>
+            
+                  </div>
+                    <div style="height: 100px;background-color: #F7F7F7;">
+                      <div class="sfooter" style=" border: 1px solid red; height: 60px;">
+                        <div >
+                          <p style="font-size: 11px;">TERMS & CONDITIONS</p>
+                          <p style="font-size: 11px;">SHIPPING POLICY</p>
+                          <p style="font-size: 11px;">CANCELLATION POLICY</p>
+                          <p style="font-size: 11px;">PRIVACY POLICY</p>
+                         </div>
+                      <div><p style="font-size: 10px;">© 2021 Nykaa E-Retail Pvt. Ltd. All Rights Reserved</p></div>
+                
+                     </div>
+                    </div>
+                    </div>
+                </div>
+          </div>
+        </body>
+      </html>
+      <script src="./styles/Javascript/autoslider.js"></script>
+      <script>
+        document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#best1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector(".div").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+
+          document.querySelector("#class1").addEventListener("click",function()
+          {
+              window.location.href="/men/men.html"
+          })
+      </script>
+     

@@ -1,0 +1,118 @@
+.wholefooter {
+  margin-top: 60px;
+}
+.footer-container {
+  background-color: #8c8d94;
+  width: 100%;
+  height: 75%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+  width: 75%;
+  margin: auto;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-1 {
+  padding: 40px 70px 0px 30px;
+}
+
+.footer-2 {
+  padding: 40px 50px 0px 70px;
+}
+
+.footer-3 {
+  padding: 40px 50px 0px 70px;
+}
+#white {
+  color: white;
+}
+
+.footer-heading a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.footer-heading a:hover {
+  color: #d81b60;
+}
+
+.footer-email-form {
+  padding: 40px 80px 50px 50px;
+  font-size: 10px;
+}
+
+.footer-email-form h2 {
+  margin-bottom: 2rem;
+}
+
+.sfooter {
+  width: 100%;
+  height: 17%;
+  background-color: #ec407a;
+  text-align: center;
+  /* padding: 10px; */
+  color: #fff;
+  margin-bottom: 40px;
+}
+#terms {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  margin: 20px 370px;
+}
+li {
+  list-style: none;
+}
+#lovediv {
+  box-sizing: border-box;
+  padding: 5% 5% 5% 10%;
+  height: 300px;
+  display: flex;
+  width: 100%;
+}
+#lovediv img:hover {
+  box-shadow: none;
+}
+.footlogo {
+  height: 40px;
+  width: 40px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 11px;
+}
+.sfooter > div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 10px;
+}
+.sfooter p {
+  margin-right: 20px;
+}
+.some {
+  margin-right: 0px;
+}
+.media {
+  display: flex;
+}
+.media > img {
+  margin-right: 20px;
+}
+h2 {
+  margin-top: -20px;
+  width: 80%;
+}
+a {
+  line-height: 15px;
+  font-size: 13px;
+}

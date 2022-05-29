@@ -1,0 +1,182 @@
+
+
+        
+        #container{
+            /* height:50px;
+            width: 50px; */
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2,auto);
+            gap: 10px;
+            
+
+            width: 80%;
+        }
+
+        #head>#brands_img1{
+            margin-top: 5%;
+            width:50%;
+            padding-left: 24%;
+            
+        }
+
+      
+
+        #container>div{
+            margin-top: 40px;
+            /* width:80% */
+
+        }
+
+        #container>div>img{
+                height: 250px;
+                width: 250px;
+                /* padding-left: 10%; */
+                /* width: 200px; */
+        }
+
+        /* a>img{
+                height: 250px;
+                width: 250px;
+        } */
+
+        h4{
+                text-align: center;
+        }
+
+
+        #single_img{
+            margin-top: 3%;
+            text-align: center;
+        }
+
+
+
+        #container1{
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1,10);
+            gap: 10px;
+            
+
+            width: 80%;
+        }
+
+        #head1>#brands_img2{
+            margin-top: 3%;
+            width:50%;
+            padding-left: 24%;
+            
+        }
+
+        #container1>div>img{
+                height: 300px;
+                width: 250px;
+                /* padding-left: 10%; */
+                /* width: 200px; */
+        }
+
+
+        #container2{
+            /* height:50px;
+            width: 50px; */
+            margin: auto; 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2,10);
+            
+            
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 3%;
+
+
+            width: 80%;
+        }
+
+        #container3
+        {
+            width: 100%;
+            background-color: #b2f8f0;
+            margin-top: 8%;
+        }
+
+        #brands_img3{
+            margin-top: 2%;
+            width:50%;
+            padding-left: 24%;
+            
+        }
+
+        #container2>div>img{
+                height: 250px;
+                width: 250px;
+                /* padding-left: 10%; */
+                /* width: 200px; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2,10);
+
+           
+            gap: 10px;
+        }
+
+        h4{
+            text-align: center;
+            margin-bottom: 15%;
+        }
+
+
+        
+
+        #container4{
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1,10);
+            /* gap: 2px; */
+            
+
+            width: 60%;
+        }
+
+        #head2>#brands_img4{
+            margin-top: 5%;
+            width:50%;
+            padding-left: 24%;
+            
+        }
+
+        #container4>div>img{
+                height: 320px;
+                width: 250px;
+                /* padding-left: 10%; */
+                /* width: 200px; */
+        }
+
+        h4{
+            text-align: center;
+        }
+
+       
+
+        #container5
+        {
+            width: 100%;
+            background-color: #ffeab9;
+            margin-top: 8%;
+            text-align: center;
+        }
+
+        #brands_img5{
+            margin-top: 2%;
+            width:50%;
+            
+            
+        }
+
+        
+
+        

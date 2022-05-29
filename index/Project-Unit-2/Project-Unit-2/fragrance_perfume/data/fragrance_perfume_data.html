@@ -1,0 +1,344 @@
+<script>
+  var allProductData = [
+  //   {
+  //     fe: "FEATURED",
+  //     bstsell: "BESTSELLER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/f/3/f388e368904245710644_1.jpg",
+  //     name: "Moi By Nykaa Eau de Perfume",
+  //     mrp: 1800,
+  //     cp: 900,
+  //     discount: "50% Off",
+  //   },
+  //   {
+  //     fe: "FEATURED",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/2/3/23804-_1_.jpg",
+  //     name: "Salvatore Ferragamo Amo Flowerful Eau de Toilette",
+  //     mrp: 5000,
+  //     cp: 4000,
+  //     discount: "20% Off",
+  //   },
+  //   {
+  //     fe: "FEATURED",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/7/5/75ca31askinn00000007_1.jpg",
+  //     name: "Skinn By Titan Tales Ibiza Eau De Parfum For Women",
+  //     mrp: 1595,
+  //     cp: 1276,
+  //     discount: "20% Off",
+  //   },
+  //   {
+  //     fe: "FEATURED",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/1/0/10ml-7640177362063_1_.jpg",
+  //     name: "Chopard Happy Chopard Lemon Dulci Eau De Parfum",
+  //     mrp: 1600,
+  //     cp: 1520,
+  //     discount: "5% Off",
+  //   },
+  //   {
+  //     fe: "FEATURED",
+  //     bstsell: "BESTSELLER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/c/e/ce4fe368904245710699_1.jpg",
+  //     name: "Moi By Nykaa Mini Pocket Perfume",
+  //     mrp: 249,
+  //     cp: 199,
+  //     discount: "20% Off",
+  //   },
+  //   {
+  //     bstsell: "BESTSELLER",
+  //     offer: "OFFER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/5/8541bcd8904245712099_1.jpg",
+  //     name: "Nykaa Love Struck Perfume",
+  //     cp: 699,
+  //   },
+  //   {
+  //     bstsell: "BESTSELLER",
+  //     offer: "OFFER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/1/7/17057038411061818961_1.jpg",
+  //     name: "Carolina Herrera Good Girl Eau De Parfum",
+  //     cp: 7400,
+  //   },
+  //   {
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/1/7/17057038411061818961_1.jpg",
+  //     name: "Carolina Herrera Good Girl Eau De Parfum",
+  //     cp: 7400,
+  //   },
+  //   {
+  //     bstsell: "BESTSELLER",
+  //     offer: "OFFER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/4/c/4c9fe6b3348901368254_a.jpg",
+  //     name: "DIOR Sauvage Eau De Parfum",
+  //     cp: 7400,
+  //   },
+  //   {
+  //     bstsell: "BESTSELLER",
+  //     offer: "OFFER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/f/5/f5820708904245712198_1.jpg",
+  //     name: "Nykaa Cosmetics Masaba By Nykaa Mini Pocket Perfume",
+  //     mrp: 299,
+  //     cp: 239,
+  //     discount: "20% Off",
+  //   },
+  //   {
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/9/8904173505381.jpg",
+  //     name: "Ramsons You are lovely Eau De Perfume",
+  //     mrp: 155,
+  //     cp: 104,
+  //     discount: "33% Off",
+  //   },
+  //   {
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/0/8011003993826.jpg",
+  //     name: "Versace Bright Crystal Eau De Toilette",
+  //     cp: 6750,
+  //   },
+  //   {
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/6/9/696e0818904245710729_1.jpg",
+  //     name: "MCaffeine Naked & Raw Deep Cleansing Coffee Face Wash",
+  //     mrp: 249,
+  //     cp: 224,
+  //     discount: "10% Off",
+  //   },
+  //   {
+  //     bstsell: "BESTSELLER",
+  //     offer: "OFFER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/3/3/3360372078500.jpg",
+  //     name: "Giorgio Armani Acqua Di Gio Eau De Toilette",
+  //     cp: 8250,
+  //   },
+  //   {
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/6/3/63135823562700373169_asp1.jpg",
+  //     name: "Jaguar Classic Black Eau De Toilette",
+  //     mrp: 2400,
+  //     cp: 1320,
+  //     discount: "45% Off",
+  //   },
+  //   {
+  //     bstsell: "BESTSELLER",
+  //     offer: "OFFER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/3/4/34178f88904245710736_1.jpg",
+  //     name: "Moi By Nykaa Mini Pocket Perfume - Joie De Vivre",
+  //     mrp: 249,
+  //     cp: 224,
+  //     discount: "10% Off",
+  //   },
+  //   {
+  //     offer: "OFFER",
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/c/b/cb313938904245712020_1.jpg",
+  //     name: "Masaba By Nykaa Perfume",
+  //     mrp: 1800,
+  //     cp: 900,
+  //     discount: "50% Off",
+  //   },
+  //   {
+  //     img_url:
+  //       "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/b/7/b711e368904245710682_1.jpg",
+  //     name: "Moi By Nykaa Mini Pocket Perfume - Amour",
+  //     mrp: 249,
+  //     cp: 224,
+  //     discount: "10% Off",
+  //   },
+  // ];
+
+  {
+      fe: "FEATURED",
+      bstsell: "BESTSELLER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/9/c/9cae3c7HEAAJ00000054%20(1).jpg",
+      name: "HealthyHey Nutrition Gold Collagen - Orange",
+      mrp: 2499,
+      cp: 1299,
+      discount: "22% Off",
+    },
+
+    {
+      fe: "FEATURED",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/9/8906000427873_1.jpg",
+      name: "Dr. Morepen Marine Collagen Skin Protein Powder With Hyaluro",
+      mrp:1999,
+      cp: 1399,
+      discount: "22% Off",
+
+    },
+    {
+      fe: "FEATURED",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/2/a2903a3mydai00000021_1.jpg",
+      name: "Inlife Hydrolyzed Type 1 And 3 Collagen Peptides - Strawberry",
+      mrp: 1999,
+      cp: 799,
+      discount: "22% Off",
+    },
+    {
+      fe: "FEATURED",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/2/a2903a3mydai00000021_1.jpg",
+      name: "myDaily Plant Based Collagen Support for Anti-Aging",
+      mrp:1199,
+      cp: 785,
+      discount: "25% Off",
+    },
+    {
+      fe: "FEATURED",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/1/e/1e63e638908009918406_main.jpg",
+      name: "OZiva Plant Based Collagen Builder for Anti-Aging Beauty, Skin",
+      mrp: 899,
+      cp: 872,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/b/b/bbbcd277079598120424_1.jpg",
+      name: "Inja Pro Finest Hydrolyzed Japanese Marine Collagen",
+      mrp:4000,
+      cp: 3400,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/3/8/38e45b18908009186683_1.jpg",
+      name: "Plix Plant-Based Collagen Builder, Advanced Anti-Ageing Form",
+      mrp: 999,
+      cp: 850,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/c/4/c4c1578nymcfn0000031_1rvm.jpg",
+      name: "Himalayan Organics Plant Based Collagen Builder Capsules",
+      mrp: 1150,
+      cp: 699,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/c/acf7ff9nykmcf0000004_1new.jpg",
+      name: "Plix Plant-Based Collagen Builder, Advanced Anti-Ageing Form",
+      mrp: 999,
+      cp: 850,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/c/acf7ff9nykmcf0000004_1new.jpg",
+      name: "Oziva Plant Based Collagen Builder + Plant Based Biotin",
+      mrp: 1549,
+      cp: 1249,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/e/f/efd9578nymcfn0000029_1rvm.jpg",
+      name: "MCaffeine Naked & Raw Coffee Under Eye Cream - Relieves",
+      mrp: 899,
+      cp: 850,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/e/e/eecdff9nymcfcom00033_1new.jpg",
+      name: "MCaffeine Body Polishing Kit",
+      mrp: 1094,
+      cp: 899,
+      discount: "18%Off",
+    },
+    {
+      fe: "FEATURED",
+      bstsell: "BESTSELLER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/9/c/9cae3c7HEAAJ00000054%20(1).jpg",
+      name: "HealthyHey Nutrition Gold Collagen - Orange",
+      mrp: 2499,
+      cp: 1299,
+      discount: "22% Off",
+    },
+    {
+      fe: "FEATURED",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/9/8906000427873_1.jpg",
+      name: "Dr. Morepen Marine Collagen Skin Protein Powder With Hyaluro",
+      mrp:1999,
+      cp: 1399,
+      discount: "22% Off",
+
+    },
+    {
+      fe: "FEATURED",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/2/a2903a3mydai00000021_1.jpg",
+      name: "Inlife Hydrolyzed Type 1 And 3 Collagen Peptides - Strawberry",
+      mrp: 1999,
+      cp: 799,
+      discount: "22% Off",
+    },
+    {
+      fe: "FEATURED",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/2/a2903a3mydai00000021_1.jpg",
+      name: "myDaily Plant Based Collagen Support for Anti-Aging",
+      mrp:1199,
+      cp: 785,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/a/c/acf7ff9nykmcf0000004_1new.jpg",
+      name: "Plix Plant-Based Collagen Builder, Advanced Anti-Ageing Form",
+      mrp: 999,
+      cp: 850,
+      discount: "25% Off",
+    },
+    {
+      bstsell: "BESTSELLER",
+      offer: "OFFER",
+      img_url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/b/b/bbbcd277079598120424_1.jpg",
+      name: "Inja Pro Finest Hydrolyzed Japanese Marine Collagen",
+      mrp:4000,
+      cp: 3400,
+      discount: "25% Off",
+    },
+  ];
+
+  // localStorage.setItem("mensPageData", JSON.stringify(allProductData));
+  
+  
+  
+  localStorage.setItem(
+    "fragrance_perfume_data",
+    JSON.stringify(allProductData)
+  );
+  window.location.href = "/Project-Unit-2/Project-Unit-2/fragrance_perfume/collagen.html";
+</script>

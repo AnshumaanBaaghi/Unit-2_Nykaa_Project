@@ -1,0 +1,145 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+#autoImageSlider2 {
+  width: 100%;
+  padding: 0px 5%;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  height: 300px;
+  user-select: none;
+  margin: auto;
+  box-shadow: 1px rgb(128, 127, 127);
+}
+#slideshowContainer2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(223, 238, 238);
+  position: relative;
+  overflow: hidden;
+}
+#leftArrow,
+#rightArrow {
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  top: 45%;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  border: 0.8px gray;
+  font-size: 20px;
+  background-color: white;
+  text-align: center;
+}
+i {
+  margin-top: 30%;
+}
+
+#rightArrow {
+  left: auto;
+  right: 10px;
+}
+.imageContainer2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.imageContainer2 img {
+  display: inline-block;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  min-height: 250px;
+}
+#dotsContainer2 {
+  width: 100%;
+  height: 22px;
+  margin-top: 10px;
+  text-align: center;
+}
+#dotsContainer2 .dots2 {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #cbcbcb;
+}
+#dotsContainer2 > :not(:last-child) {
+  margin-right: 15px;
+}
+#dotsContainer2 .dots2:active {
+  background-color: rgb(243, 114, 243);
+}
+#autoImageSlider2 .moveLeftCurrentSlide2 {
+  animation-name: moveLeftCurrent2;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+#autoImageSlider2 .moveLeftNextSlide2 {
+  animation-name: moveLeftNext2;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes moveLeftCurrent2 {
+  from {
+    margin-left: 0px;
+    opacity: 1;
+  }
+  to {
+    margin-left: -100%;
+    opacity: 1;
+  }
+}
+@keyframes moveLeftNext2 {
+  from {
+    margin-left: 100%;
+    opacity: 1;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+#autoImageSlider2 .moveRightCurrentSlide2 {
+  animation-name: moveRightCurrent2;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveRightCurrent2 {
+  from {
+    margin-left: 0px;
+    opacity: 1;
+  }
+  to {
+    margin-left: 100%;
+    opacity: 1;
+  }
+}
+#autoImageSlider2 .moveRightNextSlide2 {
+  animation-name: moveRightNext2;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveRightNext2 {
+  from {
+    margin-left: -100%;
+    opacity: 1;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+#autoImageSlider2 #dotsContainer2 {
+  margin-bottom: 60px;
+}

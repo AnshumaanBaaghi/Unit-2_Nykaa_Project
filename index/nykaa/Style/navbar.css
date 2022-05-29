@@ -1,0 +1,186 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.nav {
+  display: flex;
+  color: black;
+  font-weight: bold;
+  height: 40px;
+  padding: 0px 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-image: url("https://adn-static1.nykaa.com/media/wysiwyg/2021/topstrips18.jpg");
+  border-radius: 10px;
+  position: fixed;
+  width: 98%;
+  top: 0;
+  z-index: 2;
+  align-items: center;
+
+  /* top right bottom left */
+}
+.nav i {
+  color: black;
+}
+.nav > a {
+  color: white;
+}
+.nav a:hover,
+.nav1 a:hover,
+.nav2 a:hover {
+  color: #f1075d;
+}
+img:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.nav1 {
+  display: flex;
+  color: black;
+  height: 50px;
+  padding: 15px 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: fixed;
+  width: 98%;
+  top: 40px;
+  z-index: 2;
+  background-color: white;
+}
+.nav2 {
+  
+  display: flex;
+  margin-right: 20px;
+  color: gray;
+  height: 40px;
+  padding: 25px 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 100px;
+  width: 98%;
+  /* top: 120px; */
+  position: sticky;
+  top: 90px;
+  z-index: 1;
+  background-color: white;
+}
+.nav2 > div {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 80%;
+  margin: auto;
+  gap: 10px;
+}
+.left {
+  width: 70%;
+  
+ 
+}
+.left1 {
+  /* width: 70%; */
+  margin-left: 100px;
+  display: flex;
+ 
+}
+.right {
+   display: flex;
+  margin-top: 5px;
+  /* justify-content: space-around; */
+  width: 40%;
+  position: relative;
+  top: -10px;
+}
+.right > div {
+  position: relative;
+  top: 0px;
+  left: 36%;
+}
+.right > div > :nth-child(1) {
+  width: 300px;
+  position: relative;
+  top: 0px;
+  left: -100px;
+  height: 30px;
+}
+.right > div > :nth-child(2) {
+  position: relative;
+  top: 0px;
+  left: -70px;
+}
+.right > div > :nth-child(3) {
+  position: relative;
+  top: 0px;
+  left: -120px;
+}
+.right > div > :nth-child(4) {
+  position: relative;
+  top: 0px;
+  right: 70px;
+  font-size: 30px;
+}
+
+.right1 {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  box-sizing: border-box;
+  /* padding-bottom: 60px; */
+}
+.right1 > div {
+  margin: 0;
+  padding: 0;
+}
+.right1 > :nth-child(1) {
+  position: relative;
+  top: -4px;
+  border-right: solid 0.1px;
+}
+.right1 > :nth-child(2) {
+  position: relative;
+  top: -16px;
+  border-right: solid 0.1px;
+}
+.right1 > :nth-child(3) {
+  position: relative;
+  top: -6px;
+  border-right: solid 0.1px;
+}
+.right1 > :nth-child(4) {
+  position: relative;
+  top: 0px;
+}
+.nikaimg {
+  height: 40px;
+  margin-top: -10px;
+}
+.nyka {
+  
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 150px;
+}
+.nyka > a {
+  margin-right: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input {
+  height: 20px;
+  border-radius: 10px;
+  margin-left: -100px;
+}
+.space {
+  margin-left: 50px;
+}
+.img {
+  margin-top: 10px;
+  width: 100%;
+}
+.img1 {
+  width: 74.5%;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
